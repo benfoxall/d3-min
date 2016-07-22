@@ -1,0 +1,18 @@
+<!-- transport iframe -->
+
+<h4>transport frame</h4>
+<pre id="log"></pre>
+
+<script type="text/javascript">
+  window.addEventListener('message', function(e) {
+    console.log("MESSAGE", e)
+
+    localStorage.setItem('foo', Math.random())
+    localStorage.setItem('foo', Math.random())
+    localStorage.setItem('foo', Math.random())
+
+  })
+
+  window.parent.postMessage('READY', '*')
+  log.innerText += 'l'
+</script>
