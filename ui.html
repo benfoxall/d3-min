@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>d3-min</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <style media="screen">
+      body {
+        font-family: 'Roboto Mono';
+        margin: 2em;
+      }
+      code {
+        background: #f5f5f5;
+        display: block;
+        padding: 1em;
+        font-family: 'Roboto Mono';
+      }
+      code strong {
+        background: #d4f4cc;
+      }
+      ul {
+        padding:0;
+        margin
+      }
+      h3 {
+        margin-top: 2em;
+      }
+      li {
+        display: inline-block;
+        margin: .2em;
+        font-size: .8em;
+      }
+      li:after {
+        content: ', ';
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>d3-min</h1>
+
+    <p>Create an optimised d3 bundle by finding out which modules can be left out.</p>
+
+    <p>Detect.js will hook into d3 to track how the script is called.</p>
+
+    <code>
+      &lt;script src="https://d3js.org/d3.v4.min.js"&gt;&lt;/script&gt;
+      <br /><br />
+      <strong>
+        &lt;script src="https://this/detect.js"&gt;&lt;/script&gt;
+      </strong>
+    </code>
+
+
+    <h3>http://page.url.com</h3>
+    <h4>0/244 (v4.1.1)</h4>
+    <h4><a href="#">Download</a></h4>
+    <ul>
+      <li>format</li><li>formatPrefix</li><li>timeFormat</li><li>timeParse</li><li>utcFormat</li><li>utcParse</li><li>event</li><li>version</li><li>bisect</li><li>bisectRight</li><li>bisectLeft</li><li>ascending</li><li>bisector</li><li>descending</li><li>deviation</li><li>extent</li><li>histogram</li><li>thresholdFreedmanDiaconis</li><li>thresholdScott</li><li>thresholdSturges</li><li>max</li><li>mean</li><li>median</li><li>merge</li><li>min</li><li>pairs</li><li>permute</li><li>quantile</li><li>range</li><li>scan</li><li>shuffle</li><li>sum</li><li>ticks</li><li>tickStep</li><li>transpose</li><li>variance</li><li>zip</li><li>entries</li><li>keys</li><li>values</li><li>map</li><li>set</li><li>nest</li><li>randomUniform</li><li>randomNormal</li><li>randomLogNormal</li><li>randomBates</li><li>randomIrwinHall</li><li>randomExponential</li><li>easeLinear</li><li>easeQuad</li><li>easeQuadIn</li><li>easeQuadOut</li><li>easeQuadInOut</li><li>easeCubic</li><li>easeCubicIn</li><li>easeCubicOut</li><li>easeCubicInOut</li><li>easePoly</li><li>easePolyIn</li><li>easePolyOut</li><li>easePolyInOut</li><li>easeSin</li><li>easeSinIn</li><li>easeSinOut</li><li>easeSinInOut</li><li>easeExp</li><li>easeExpIn</li><li>easeExpOut</li><li>easeExpInOut</li><li>easeCircle</li><li>easeCircleIn</li><li>easeCircleOut</li><li>easeCircleInOut</li><li>easeBounce</li><li>easeBounceIn</li><li>easeBounceOut</li><li>easeBounceInOut</li><li>easeBack</li><li>easeBackIn</li><li>easeBackOut</li><li>easeBackInOut</li><li>easeElastic</li><li>easeElasticIn</li><li>easeElasticOut</li><li>easeElasticInOut</li><li>polygonArea</li><li>polygonCentroid</li><li>polygonHull</li><li>polygonContains</li><li>polygonLength</li><li>path</li><li>quadtree</li><li>queue</li><li>arc</li><li>area</li><li>line</li><li>pie</li><li>radialArea</li><li>radialLine</li><li>symbol</li><li>symbols</li><li>symbolCircle</li><li>symbolCross</li><li>symbolDiamond</li><li>symbolSquare</li><li>symbolStar</li><li>symbolTriangle</li><li>symbolWye</li><li>curveBasisClosed</li><li>curveBasisOpen</li><li>curveBasis</li><li>curveBundle</li><li>curveCardinalClosed</li><li>curveCardinalOpen</li><li>curveCardinal</li><li>curveCatmullRomClosed</li><li>curveCatmullRomOpen</li><li>curveCatmullRom</li><li>curveLinearClosed</li><li>curveLinear</li><li>curveMonotoneX</li><li>curveMonotoneY</li><li>curveNatural</li><li>curveStep</li><li>curveStepAfter</li><li>curveStepBefore</li><li>stack</li><li>stackOffsetExpand</li><li>stackOffsetNone</li><li>stackOffsetSilhouette</li><li>stackOffsetWiggle</li><li>stackOrderAscending</li><li>stackOrderDescending</li><li>stackOrderInsideOut</li><li>stackOrderNone</li><li>stackOrderReverse</li><li>color</li><li>rgb</li><li>hsl</li><li>lab</li><li>hcl</li><li>cubehelix</li><li>interpolate</li><li>interpolateArray</li><li>interpolateDate</li><li>interpolateNumber</li><li>interpolateObject</li><li>interpolateRound</li><li>interpolateString</li><li>interpolateTransformCss</li><li>interpolateTransformSvg</li><li>interpolateZoom</li><li>interpolateRgb</li><li>interpolateRgbBasis</li><li>interpolateRgbBasisClosed</li><li>interpolateHsl</li><li>interpolateHslLong</li><li>interpolateLab</li><li>interpolateHcl</li><li>interpolateHclLong</li><li>interpolateCubehelix</li><li>interpolateCubehelixLong</li><li>interpolateBasis</li><li>interpolateBasisClosed</li><li>quantize</li><li>dispatch</li><li>dsvFormat</li><li>csvParse</li><li>csvParseRows</li><li>csvFormat</li><li>csvFormatRows</li><li>tsvParse</li><li>tsvParseRows</li><li>tsvFormat</li><li>tsvFormatRows</li><li>request</li><li>html</li><li>json</li><li>text</li><li>xml</li><li>csv</li><li>tsv</li><li>now</li><li>timer</li><li>timerFlush</li><li>timeout</li><li>interval</li><li>timeInterval</li><li>timeMillisecond</li><li>timeMilliseconds</li><li>timeSecond</li><li>timeSeconds</li><li>timeMinute</li><li>timeMinutes</li><li>timeHour</li><li>timeHours</li><li>timeDay</li><li>timeDays</li><li>timeWeek</li><li>timeWeeks</li><li>timeSunday</li><li>timeSundays</li><li>timeMonday</li><li>timeMondays</li><li>timeTuesday</li><li>timeTuesdays</li><li>timeWednesday</li><li>timeWednesdays</li><li>timeThursday</li><li>timeThursdays</li><li>timeFriday</li><li>timeFridays</li><li>timeSaturday</li><li>timeSaturdays</li><li>timeMonth</li><li>timeMonths</li><li>timeYear</li><li>timeYears</li><li>utcMillisecond</li><li>utcMilliseconds</li><li>utcSecond</li><li>utcSeconds</li><li>utcMinute</li><li>utcMinutes</li><li>utcHour</li><li>utcHours</li><li>utcDay</li><li>utcDays</li><li>utcWeek</li><li>utcWeeks</li><li>utcSunday</li><li>utcSundays</li><li>utcMonday</li><li>utcMondays</li><li>utcTuesday</li><li>utcTuesdays</li><li>utcWednesday</li><li>utcWednesdays</li><li>utcThursday</li><li>utcThursdays</li><li>utcFriday</li><li>utcFridays</li><li>utcSaturday</li><li>utcSaturdays</li><li>utcMonth</li><li>utcMonths</li><li>utcYear</li><li>utcYears</li><li>formatLocale</li><li>formatDefaultLocale</li><li>formatSpecifier</li><li>precisionFixed</li><li>precisionPrefix</li><li>precisionRound</li><li>isoFormat</li><li>isoParse</li><li>timeFormatLocale</li><li>timeFormatDefaultLocale</li><li>scaleBand</li><li>scalePoint</li><li>scaleIdentity</li><li>scaleLinear</li><li>scaleLog</li><li>scaleOrdinal</li><li>scaleImplicit</li><li>scalePow</li><li>scaleSqrt</li><li>scaleQuantile</li><li>scaleQuantize</li><li>scaleThreshold</li><li>scaleTime</li><li>scaleUtc</li><li>schemeCategory10</li><li>schemeCategory20b</li><li>schemeCategory20c</li><li>schemeCategory20</li><li>scaleSequential</li><li>interpolateCubehelixDefault</li><li>interpolateRainbow</li><li>interpolateWarm</li><li>interpolateCool</li><li>interpolateViridis</li><li>interpolateMagma</li><li>interpolateInferno</li><li>interpolatePlasma</li><li>creator</li><li>customEvent</li><li>local</li><li>matcher</li><li>mouse</li><li>namespace</li><li>namespaces</li><li>select</li><li>selectAll</li><li>selection</li><li>selector</li><li>selectorAll</li><li>touch</li><li>touches</li><li>window</li><li>active</li><li>interrupt</li><li>transition</li><li>axisTop</li><li>axisRight</li><li>axisBottom</li><li>axisLeft</li><li>cluster</li><li>hierarchy</li><li>pack</li><li>packSiblings</li><li>packEnclose</li><li>partition</li><li>stratify</li><li>tree</li><li>treemap</li><li>treemapBinary</li><li>treemapDice</li><li>treemapSlice</li><li>treemapSliceDice</li><li>treemapSquarify</li><li>treemapResquarify</li><li>forceCenter</li><li>forceCollide</li><li>forceLink</li><li>forceManyBody</li><li>forceSimulation</li><li>forceX</li><li>forceY</li><li>drag</li><li>dragDisable</li><li>dragEnable</li><li>voronoi</li><li>zoom</li><li>zoomIdentity</li><li>zoomTransform</li><li>brush</li><li>brushX</li><li>brushY</li><li>brushSelection</li><li>chord</li><li>ribbon</li><li>geoAlbers</li><li>geoAlbersUsa</li><li>geoArea</li><li>geoAzimuthalEqualArea</li><li>geoAzimuthalEqualAreaRaw</li><li>geoAzimuthalEquidistant</li><li>geoAzimuthalEquidistantRaw</li><li>geoBounds</li><li>geoCentroid</li><li>geoCircle</li><li>geoClipExtent</li><li>geoConicConformal</li><li>geoConicConformalRaw</li><li>geoConicEqualArea</li><li>geoConicEqualAreaRaw</li><li>geoConicEquidistant</li><li>geoConicEquidistantRaw</li><li>geoDistance</li><li>geoEquirectangular</li><li>geoEquirectangularRaw</li><li>geoGnomonic</li><li>geoGnomonicRaw</li><li>geoGraticule</li><li>geoInterpolate</li><li>geoLength</li><li>geoMercator</li><li>geoMercatorRaw</li><li>geoOrthographic</li><li>geoOrthographicRaw</li><li>geoPath</li><li>geoProjection</li><li>geoProjectionMutator</li><li>geoRotation</li><li>geoStereographic</li><li>geoStereographicRaw</li><li>geoStream</li><li>geoTransform</li><li>geoTransverseMercator</li><li>geoTransverseMercatorRaw</li><li>hexbin</li>
+    </ul>
+  </body>
+</html>
