@@ -57,6 +57,7 @@
   function wrap(obj, prop) {
     var orig = obj[prop]
     obj[prop] = function __instrumented__() {
+      state.modules[prop] = true
       notify(state)
       obj[prop] = orig
       return orig.apply(obj, arguments)
@@ -68,4 +69,4 @@
    return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
   }
 
-})(d3 )
+})(d3)
