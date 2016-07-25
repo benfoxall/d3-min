@@ -5,14 +5,14 @@
 
 <script type="text/javascript">
   window.addEventListener('message', function(e) {
-    console.log("MESSAGE", e)
 
-    localStorage.setItem('foo', Math.random())
-    localStorage.setItem('foo', Math.random())
-    localStorage.setItem('foo', Math.random())
+    //
+    e.data.burst = Math.random()
 
+    localStorage.setItem('d3_min', JSON.stringify(e.data))
+    log.innerText += '*'
   })
 
   window.parent.postMessage('READY', '*')
-  log.innerText += 'l'
+  log.innerText += '-'
 </script>
