@@ -1,28 +1,4 @@
-var d3 = {
-  select: function(qs){
-    var el = document.querySelector(qs)
-    return {
-      text: function(t){
-        el.innerText = t
-      },
-      style: function(rule, value){
-        el.style[rule] = value
-      }
-    }
-  },
-  foo: function(a){
-    return 42 + a
-  },
-  unused: function(){
-    console.log("NOPE")
-  }
-}
-
-
-
-
-
-function instrument(obj){
+(function instrument(obj){
 
   // create link to root origin
 
@@ -36,19 +12,19 @@ function instrument(obj){
 
   // TODO HARDCODE ON BUILD
   var origin = document.currentScript
-      .src.replace(/\/d3min\.js$/,'')
+      .src.replace(/\/detect\.js$/,'')
 
   var transport_src = origin + '/_transport.html'
 
   var transport = document.createElement('iframe')
   transport.src = transport_src
+  transport.style.display = 'none'
   document.body.appendChild(transport)
 
   window.addEventListener('message', function(e) {
     if(e.origin == origin) {
 
       if(e.data == 'READY') {
-        console.log('transport ready')
         notify = function(messsage) {
           transport.contentWindow.postMessage(messsage, origin)
         }
@@ -60,22 +36,36 @@ function instrument(obj){
     }
   })
 
-  Object.keys(obj).forEach(function(prop){
-    wrap(obj, prop)
+  var state = {
+    page: document.location.href,
+    version: d3.version,
+    modules: {}
+  }
+
+  var keys = Object.keys(obj)
+  .filter(function(k){
+    return isFunction(obj[k])
   })
+
+  keys.forEach(function(prop){
+    wrap(obj, prop)
+    state.modules[prop] = false
+  })
+
+  notify(state)
 
   function wrap(obj, prop) {
     var orig = obj[prop]
-    obj[prop] = function(){
-      console.log("log", prop)
-
-      notify(prop)
+    obj[prop] = function __instrumented__() {
+      notify(state)
       obj[prop] = orig
       return orig.apply(obj, arguments)
     }
   }
 
-}
+  function isFunction(functionToCheck) {
+   var getType = {};
+   return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
+  }
 
-
-instrument(d3)
+})(d3 )
